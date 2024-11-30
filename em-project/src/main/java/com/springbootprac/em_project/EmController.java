@@ -16,23 +16,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RestController
 public class EmController {
 
- EmpServicesInterface employeeServiceImp = new EmployeeServiceImp() ;
+    @Autowired
+    private EmpServicesInterface employeeService;
 
 
     @GetMapping("employees") 
      public List<Employee> getEmployees(){
-       return employeeServiceImp.listEmployee();
+       return employeeService.listEmployee();
     }
 
 
     @PostMapping("employees")
     public String createEmployee(@RequestBody Employee employee){
-       return employeeServiceImp.createEmployee(employee);
+       return employeeService.createEmployee(employee);
     }
  
     @DeleteMapping("employees/{id}")
     public String deleteEmployee(@PathVariable Long id){
-        if(employeeServiceImp.deleteEmployee(id)){
+        if(employeeService.deleteEmployee(id)){
             return "deleted sucessfully";
         }
         return "not found";
