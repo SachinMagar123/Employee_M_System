@@ -10,5 +10,6 @@ public interface EmpServicesInterface {
 
   Boolean deleteEmployee(Long id);
 
-    
+   String updateEmployee(Long id , Employee employee);
+
 }

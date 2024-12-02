@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PutMapping;
+
 
 
 
@@ -37,6 +39,12 @@ public class EmController {
             return "deleted sucessfully";
         }
         return "not found";
+    }
+
+    @PutMapping("employees/{id}")
+    public String updateEmployee(@PathVariable long id, @RequestBody Employee employee) {
+     
+        return employeeService.updateEmployee(id,employee);
     }
 
     

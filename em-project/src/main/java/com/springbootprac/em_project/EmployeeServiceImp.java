@@ -41,6 +41,7 @@ public class EmployeeServiceImp implements EmpServicesInterface {
         for (EmployeeEntity employeeEntity : employeeEntities) {
 
             Employee emp = new Employee();
+            emp.setId(employeeEntity.getId());
             emp.setName(employeeEntity.getName());
             emp.setPhone(employeeEntity.getPhone());
             emp.setEmail(employeeEntity.getEmail());
@@ -55,6 +56,23 @@ public class EmployeeServiceImp implements EmpServicesInterface {
         employeeRepository.delete(employeeEntity);  
        return true;
     }
+
+
+    @Override
+    public String updateEmployee(Long id, Employee employee) {
+
+         EmployeeEntity employeeEntity = employeeRepository.findById(id).get();
+         employeeEntity.setName(employee.getName());
+         employeeEntity.setPhone(employee.getPhone());
+         employeeEntity.setEmail(employee.getEmail());
+
+         employeeRepository.save(employeeEntity);
+    
+        return "Updated Sucessfully";
+ 
+    }
+
+    
     
     
 }
