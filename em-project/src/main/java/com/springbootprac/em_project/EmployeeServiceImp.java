@@ -51,7 +51,8 @@ public class EmployeeServiceImp implements EmpServicesInterface {
 
     @Override
     public Boolean deleteEmployee(Long id) {
-    //    employees.remove(id);
+        EmployeeEntity employeeEntity = employeeRepository.findById(id).get();
+        employeeRepository.delete(employeeEntity);  
        return true;
     }
     
