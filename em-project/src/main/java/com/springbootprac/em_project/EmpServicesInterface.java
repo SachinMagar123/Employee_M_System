@@ -8,6 +8,8 @@ public interface EmpServicesInterface {
 
    List<Employee> listEmployee();
 
+   Employee showEmployee(Long id);
+
   Boolean deleteEmployee(Long id);
 
    String updateEmployee(Long id , Employee employee);

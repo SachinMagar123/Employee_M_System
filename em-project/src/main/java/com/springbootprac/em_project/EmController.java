@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -26,6 +28,12 @@ public class EmController {
      public List<Employee> getEmployees(){
        return employeeService.listEmployee();
     }
+
+    @GetMapping("employees/{id}")
+    public Employee getEmployeeById(@PathVariable Long id) {
+        return employeeService.showEmployee(id);
+    }
+    
 
 
     @PostMapping("employees")

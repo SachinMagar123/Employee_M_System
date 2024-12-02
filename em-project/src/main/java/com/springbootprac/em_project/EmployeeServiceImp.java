@@ -31,6 +31,18 @@ public class EmployeeServiceImp implements EmpServicesInterface {
         return "added";
     }
 
+    
+    @Override
+    public Employee showEmployee(Long id) {
+
+       EmployeeEntity employeeEntity =  employeeRepository.findById(id).get();
+       Employee employee =new Employee();
+       BeanUtils.copyProperties(employeeEntity, employee);
+
+       return employee;
+
+    }
+
     @Override
     public List<Employee> listEmployee() {
 
@@ -72,7 +84,5 @@ public class EmployeeServiceImp implements EmpServicesInterface {
  
     }
 
-    
-    
     
 }
