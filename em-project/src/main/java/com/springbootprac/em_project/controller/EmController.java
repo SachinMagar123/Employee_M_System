@@ -1,6 +1,9 @@
-package com.springbootprac.em_project;
+package com.springbootprac.em_project.controller;
 
 import org.springframework.web.bind.annotation.RestController;
+
+import com.springbootprac.em_project.EmpServicesInterface;
+import com.springbootprac.em_project.Employee;
 
 import java.util.List;
 
@@ -11,11 +14,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-
-
-
 
 @RestController
 public class EmController {
