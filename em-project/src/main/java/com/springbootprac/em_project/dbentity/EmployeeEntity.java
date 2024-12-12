@@ -1,4 +1,4 @@
-package com.springbootprac.em_project;
+package com.springbootprac.em_project.dbentity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
