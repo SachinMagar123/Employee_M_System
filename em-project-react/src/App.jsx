@@ -2,9 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import NavBar from './nav-bar/nav.jsx'
+import NavBar from './components/nav.jsx'
 import Add from './Add.jsx'
-import Table from './table/table.jsx'
+import Table from './components/table.jsx'
+import AddEmployee from './components/Addemployee.jsx'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <NavBar/>
       <Add/>
       <Table/>
+      <AddEmployee/>
       <h1>ke xa</h1>
     </>
   )
