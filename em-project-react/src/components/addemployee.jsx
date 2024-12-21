@@ -2,7 +2,7 @@ import React from 'react'
 
 const AddEmployee = () => {
   return (
-    <div>
+    <div class="w-1/2 mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
         {/* Name */}
         <div>
         <label for="name" class="block text-gray-600 font-medium mb-1">Name</label>
