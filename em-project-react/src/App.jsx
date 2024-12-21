@@ -20,10 +20,7 @@ function App() {
         <Route path="/" element={<Table/>} />
         <Route path="/addemployee" element={<AddEmployee/>} />
       </Routes>
-    </Router>
-    
-      <h1>ke xa</h1>
-      
+    </Router>      
     </>
   )
 }
